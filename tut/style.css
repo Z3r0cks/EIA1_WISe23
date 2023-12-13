@@ -1,0 +1,80 @@
+body {
+   font-family: "Poppins", sans-serif;
+   padding: 0;
+   margin: 50px 200px;
+   background-color: #222;
+   height: 80vh;
+   border: solid 5px #11998e;
+   border-radius: 23px;
+}
+
+.intputForm__group {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   padding: 15px 0 0;
+   margin-top: 10px;
+   width: 50%;
+   transform: translateX(-50%);
+}
+.intputForm__field {
+   font-family: inherit;
+   width: 100%;
+   border: 0;
+   border-bottom: 2px solid #9b9b9b;
+   outline: 0;
+   font-size: 1.3rem;
+   color: #fff;
+   padding: 7px 0;
+   background: transparent;
+   transition: border-color 0.2s;
+}
+.intputForm__field::placeholder {
+   color: transparent;
+}
+.intputForm__field:placeholder-shown ~ .intputForm__label {
+   font-size: 1.3rem;
+   cursor: text;
+   top: 20px;
+}
+.intputForm__label {
+   position: absolute;
+   top: 0;
+   display: block;
+   transition: 0.2s;
+   font-size: 1rem;
+   color: #9b9b9b;
+}
+.intputForm__field:focus {
+   padding-bottom: 6px;
+   font-weight: 700;
+   border-width: 3px;
+   border-image: linear-gradient(to right, #11998e, #38ef7d);
+   border-image-slice: 1;
+}
+.intputForm__field:focus ~ .intputForm__label {
+   position: absolute;
+   top: 0;
+   display: block;
+   transition: 0.2s;
+   font-size: 1rem;
+   color: #11998e;
+   font-weight: 700;
+}
+
+.intputForm__field:required,
+.intputForm__field:invalid {
+   box-shadow: none;
+}
+
+#output {
+   position: relative;
+   top: 30%;
+   left: 50%;
+   padding: 15px 0 0;
+   margin-top: 10px;
+   width: 50%;
+   transform: translateX(-50%);
+   color: #11998e;
+   font-size: 1.3rem;
+}
